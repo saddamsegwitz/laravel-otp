@@ -81,7 +81,6 @@ class OtpGenerationTest extends TestCase
         $this->assertEquals($validator->status, false);
     }
 
-
     /** @test */
     public function cant_able_to_verify_the_otp_once_validated()
     {

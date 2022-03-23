@@ -174,6 +174,7 @@ class OtpGenerator
         if ($otp->token == $token) {
             $otp->otp_status = 1;
             $otp->save();
+
             return (object) [
                 'status' => true,
                 'message' => 'OTP is valid',
