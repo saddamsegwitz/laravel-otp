@@ -1,0 +1,56 @@
+{
+    "name": "saddamsegwitz/otp-generator",
+    "description": "OTP Generator and Validator for Laravel Applications",
+    "keywords": [
+        "saddamsegwitz",
+        "otp-generator",
+        "Laravel"
+    ],
+    "homepage": "https://github.com/saddamsegwitz/otp-generator",
+    "license": "MIT",
+    "authors": [{
+        "name": "saddam",
+        "email": "saddam@segwitz.com",
+        "homepage": "https://segwitz.com",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "^7.3|7.4|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^3.11|^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Segwitz\\Otp\\": "src",
+            "Segwitz\\Otp\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Segwitz\\Otp\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Segwitz\\Otp\\OtpServiceProvider"
+            ],
+            "aliases": {
+                "Otp": "Segwitz\\Otp\\OtpFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
